@@ -1,5 +1,8 @@
 import { generateJoke } from './generator.js';
+import { formatJoke } from './formatter.js';
 
 const joke = generateJoke();
 
-console.log(joke);
+const formattedJoke = formatJoke(joke);
+
+console.log(formattedJoke);

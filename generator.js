@@ -1,30 +1,23 @@
-import {
-  personagens,
-  objetivos,
-  problemas,
-  resultados,
-  locais
-} from './data.js';
+import jokeData from './data.js';
 
 function getRandomItem(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
 
   return array[randomIndex];
 }
+
 export function generateJoke() {
-  const personagem = getRandomItem(personagens);
-  const objetivo = getRandomItem(objetivos);
-  const problema = getRandomItem(problemas);
-  const resultado = getRandomItem(resultados);
-  const local = getRandomItem(locais);
+  const personagem = getRandomItem(jokeData.personagens);
+  const objetivo = getRandomItem(jokeData.objetivos);
+  const problema = getRandomItem(jokeData.problemas);
+  const resultado = getRandomItem(jokeData.resultados);
+  const local = getRandomItem(jokeData.locais);
 
-  return `
-=== NOTÍCIA URGENTE ===
-
-${local}, ${personagem} tentou ${objetivo}.
-
-A iniciativa fracassou porque ${problema}.
-
-${resultado}.
-`;
+  return {
+    local,
+    personagem,
+    objetivo,
+    problema,
+    resultado
+  };
 }
