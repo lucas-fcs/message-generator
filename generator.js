@@ -1,4 +1,10 @@
-import jokeData from './data.js';
+import {
+  getPersonagens,
+  getObjetivos,
+  getProblemas,
+  getResultados,
+  getLocais
+} from './JokeRepository.js';
 
 function getRandomItem(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
@@ -7,11 +13,11 @@ function getRandomItem(array) {
 }
 
 export function generateJoke() {
-  const personagem = getRandomItem(jokeData.personagens);
-  const objetivo = getRandomItem(jokeData.objetivos);
-  const problema = getRandomItem(jokeData.problemas);
-  const resultado = getRandomItem(jokeData.resultados);
-  const local = getRandomItem(jokeData.locais);
+  const personagem = getRandomItem(getPersonagens());
+const objetivo = getRandomItem(getObjetivos());
+const problema = getRandomItem(getProblemas());
+const resultado = getRandomItem(getResultados());
+const local = getRandomItem(getLocais());
 
   return {
     local,
