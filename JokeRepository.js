@@ -1,7 +1,8 @@
+import jokesData from './data/jokes.json' with { type: 'json' };
 import jokeData from './data.js';
 
 export function getPersonagens() {
-  return jokeData.personagens;
+  return jokesData.personagens;
 }
 
 export function getObjetivos() {
