@@ -1,10 +1,4 @@
-import {
-  getPersonagens,
-  getObjetivos,
-  getProblemas,
-  getResultados,
-  getLocais
-} from './JokeRepository.js';
+import { getAllData } from './JokeRepository.js';
 
 function getRandomItem(array) {
   const randomIndex = Math.floor(Math.random() * array.length);
@@ -13,11 +7,13 @@ function getRandomItem(array) {
 }
 
 export async function generateJoke() {
-  const personagem = getRandomItem(await getPersonagens());
-  const objetivo = getRandomItem(await getObjetivos());
-  const problema = getRandomItem(await getProblemas());
-  const resultado = getRandomItem(await getResultados());
-  const local = getRandomItem(await getLocais());
+  const data = await getAllData();
+
+  const personagem = getRandomItem(data.personagens);
+  const objetivo = getRandomItem(data.objetivos);
+  const problema = getRandomItem(data.problemas);
+  const resultado = getRandomItem(data.resultados);
+  const local = getRandomItem(data.locais);
 
   return {
     local,

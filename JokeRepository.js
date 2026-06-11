@@ -36,3 +36,6 @@ export async function getLocais() {
 
   return jokesData.locais;
 }
+export async function getAllData() {
+  return await getJokesData();
+}
