@@ -1,8 +1,12 @@
 import { generateJoke } from './generator.js';
 import { formatJoke } from './formatter.js';
 
-const joke = generateJoke();
+async function main() {
+  const joke = await generateJoke();
 
-const formattedJoke = formatJoke(joke);
+  const formattedJoke = formatJoke(joke);
 
-console.log(formattedJoke);
+  console.log(formattedJoke);
+}
+
+main();

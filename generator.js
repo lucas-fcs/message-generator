@@ -12,8 +12,8 @@ function getRandomItem(array) {
   return array[randomIndex];
 }
 
-export function generateJoke() {
-  const personagem = getRandomItem(getPersonagens());
+export async function generateJoke() {
+  const personagem = getRandomItem(await getPersonagens());
 const objetivo = getRandomItem(getObjetivos());
 const problema = getRandomItem(getProblemas());
 const resultado = getRandomItem(getResultados());
