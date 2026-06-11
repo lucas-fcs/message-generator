@@ -14,10 +14,10 @@ function getRandomItem(array) {
 
 export async function generateJoke() {
   const personagem = getRandomItem(await getPersonagens());
-const objetivo = getRandomItem(getObjetivos());
-const problema = getRandomItem(getProblemas());
-const resultado = getRandomItem(getResultados());
-const local = getRandomItem(getLocais());
+  const objetivo = getRandomItem(await getObjetivos());
+  const problema = getRandomItem(await getProblemas());
+  const resultado = getRandomItem(await getResultados());
+  const local = getRandomItem(await getLocais());
 
   return {
     local,

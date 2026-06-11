@@ -1,6 +1,5 @@
 import { readFile } from 'fs/promises';
-import jokesData from './data/jokes.json' with { type: 'json' };
-import jokeData from './data.js';
+
 
 async function getJokesData() {
   const data = await readFile('./data/jokes.json', 'utf-8');
@@ -14,18 +13,26 @@ export async function getPersonagens() {
   return jokesData.personagens;
 }
 
-export function getObjetivos() {
-  return jokeData.objetivos;
+export async function getObjetivos() {
+  const jokesData = await getJokesData();
+
+  return jokesData.objetivos;
 }
 
-export function getProblemas() {
-  return jokeData.problemas;
+export async function getProblemas() {
+  const jokesData = await getJokesData();
+
+  return jokesData.problemas;
 }
 
-export function getResultados() {
-  return jokeData.resultados;
+export async function getResultados() {
+  const jokesData = await getJokesData();
+
+  return jokesData.resultados;
 }
 
-export function getLocais() {
-  return jokeData.locais;
+export async function getLocais() {
+  const jokesData = await getJokesData();
+
+  return jokesData.locais;
 }
