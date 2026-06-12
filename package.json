@@ -1,0 +1,20 @@
+{
+  "name": "message-generator",
+  "version": "1.0.0",
+  "description": "Random absurd news headline generator built with JavaScript and Node.js",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucas-fcs/message-generator.git"
+  },
+  "author": "Lucas F. C. Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucas-fcs/message-generator/issues"
+  },
+  "homepage": "https://github.com/lucas-fcs/message-generator#readme"
+}
